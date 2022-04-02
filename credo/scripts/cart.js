@@ -1,7 +1,7 @@
 var cartitems = JSON.parse(localStorage.getItem("Cart_Items"))||[]
 console.log(cartitems)
 
-
+var p = 0;
 function displayCart(cartitems) {
     document.querySelector("tbody").textContent = ""
     cartitems.map(function(data, index) {
@@ -24,14 +24,16 @@ function displayCart(cartitems) {
 
         var td4 = document.createElement("td")
         td4.textContent = "RS" + " " + data.price + ".00";
+        // p = p + data.price
 
         var td5 = document.createElement("td")
         td5.textContent = "RS" + " " + data.price + ".00"
+        p = p + data.price
 
         var td6 = document.createElement("td")
         td6.innerHTML = "Delete"
         td6.addEventListener("click", function() {
-            deletetask(index)
+            deleteItems(index)
         })
         td6.addEventListener("click",function(e){
             e.target.parentNode.remove();
@@ -49,8 +51,10 @@ displayCart(cartitems)
 // Delete Items here
 
 function deleteItems(index) {
+    p -= data.price
     cartitems.splice(index, 1)
     localStorage.setItem("CartItems", JSON.stringify(cartitems))
+    document.querySelector("#total").textContent = `Total: RS ${p}.00`
     displayCart(cartitems)
 }
 
