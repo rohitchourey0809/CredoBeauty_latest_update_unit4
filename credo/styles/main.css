@@ -13,12 +13,12 @@
   border-radius: 10px;
 }
 #signcontainer:hover {
-  background-color: powderblue;
+  background-color: rgb(43, 7, 7);
   border-radius: 4px;
-  width:100%
+  width: 100%;
 }
-#signcontainer>input{
-width:97%;
+#signcontainer > input {
+  width: 97%;
 }
 #buttonsign,
 #buttonlogin {
@@ -60,7 +60,7 @@ width:97%;
 #FULLDIV {
   margin: auto;
   background-color: #fff;
-margin-top: 250px;
+  margin-top: 250px;
   /* border: 5px solid black; */
   text-align: center;
   width: 50%;
@@ -116,17 +116,7 @@ margin-top: 250px;
   font-size: 20px;
   background-color: blanchedalmond;
 }
-body {
-  /* background-color: black; */
-  /* background-image: "https://www.freepik.com/free-vector/mobile-app-concept_4185663.htm#query=sign%20up&position=38&from_view=keyword"; */
-  transition-property: all;
-  transition-duration: 5s;
-  border-radius: 5px;
-}
-body :hover {
-  /* background: -webkit-gradient(red, yellowgreen); */
-  border-radius: 5px;
-}
+
 #buttonlogin {
   width: 300px;
   background-color: bisque;
