@@ -87,7 +87,7 @@ document
 
      
 
-        let response = await fetch("http://localhost:5000/login", {
+        let response = await fetch(`https://finalmernproject.herokuapp.com/login`, {
             method: "POST",
             body: userlogin,
             headers: {
@@ -102,7 +102,7 @@ document
             alert("Invalid Email or Password")
         }
         else{
-        let data=await response.json();
+        let data=await response;
         console.log("data:",data);
         setTimeout(function(){
       window.location.href = "home.html";
